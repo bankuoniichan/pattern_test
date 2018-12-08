@@ -6,9 +6,11 @@ def verify_samples():
 	target_dir = 'train_sampled'
 	valid_dir = 'valid_sampled'
 	test_dir = 'test_sampled'
-	*filelist, = os.listdir(base_dir)[1:101]
 
 	if not os.path.exists(target_dir):
+		
+		*filelist, = os.listdir(base_dir)[1:101]
+
 		for d in [target_dir, valid_dir, test_dir]:
 			os.mkdir(d)
 
