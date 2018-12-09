@@ -1,2 +1,3 @@
 train_simplified/
 *.cmd
+*_log.txt
