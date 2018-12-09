@@ -9,7 +9,9 @@ def verify_samples():
 
 	if not os.path.exists(target_dir):
 		
-		*filelist, = os.listdir(base_dir)[1:101]
+		*filelist, = os.listdir(base_dir)
+		*filelist, = sorted(filter(lambda x:x[0]!='.',filelist))
+		filelist = filelist[:100]
 
 		for d in [target_dir, valid_dir, test_dir]:
 			os.mkdir(d)
